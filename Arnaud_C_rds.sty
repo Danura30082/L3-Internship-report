@@ -1,0 +1,31 @@
+\usepackage[top=2.5cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry} %margins
+\usepackage[T1]{fontenc} %used to make sure accented lettre comme ou right
+
+\usepackage{mathptmx} %times new roman %math package to make equations
+% \numberwithin{equation}{section} %allows to rest numbering for long documents
+% \numberwithin{figure}{section} %allows to rest numbering for long documents
+\usepackage{hyperref} %Insert links %\name ref and autoref usefull
+\hypersetup{
+    colorlinks,
+    linkcolor={red!60!black},
+    citecolor={blue!60!black},
+    urlcolor={blue!80!black}
+}%explore use of backref for better hyperlinks
+\usepackage[nameinlink]{cleveref}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{caption}%make caption on figures
+\usepackage{subcaption}%make caption on subfigures
+\usepackage{svg} %allow to import svg files
+
+\usepackage{minted} %code Highlighting 
+
+\usepackage{wrapfig} %allows to have figures besides text
+\usepackage{changepage} %allows to change the format of the page middocument
+\usepackage{multicol} %allows to have mutiple columns
+
+\usepackage{lipsum} % generate filler text
+
+\usepackage{tocloft} %used to control the layout of a table of contents
+\setlength{\cftparskip}{0.2 em} 
+\setlength{\cftbeforesecskip}{0.5em}

@@ -1,0 +1,25 @@
+\section{Amélioration de la CanOp}
+
+Un des probleme majeur de la CanOp reste son poids relativement conséquent de 5,5~kg. Ce poids peut paraitre leger mais les operatuer doive porter les sonde a bout de bras pendant un shift de 8~hr sous le soleil avec une temperature qui monte regulierement au dessus de 40°C. Deja lors de sa conception on avez envisager de changer l'armature d'aluminum a de la fibre de carbon. 
+
+Une grosse partie de mon travail a donc etait d'etudier et de proposer de solution a ce probleme. Assez rappidement trois avenue d'ameliration sont apparue.
+\begin{enumerate}
+    \item Alleger le gps 
+    \item Alleger les sonde
+    \item Repartir l'effort sur l'operateur
+\end{enumerate}
+
+\subsection{Allerger le Gps}
+Actuellemnt le GPS est une piece monolitique fourit par Ophelia (voir \cref{ssec:Gps_differenciel}) qui calcule en interne la position corriger de la sonde. Une solution pourrait etre de fracturer le differnt partie du GPS et de delocaliser le calcule de la position et de sa correction a appliqué depuis la tablette de l'operateur en laissant l'antenne sur la sonde. D'autre solution a partir de puce integrer pourrait egalemetn mené a des econmie de poids.
+
+\subsection{Alleger les sonde}
+Les sonde sur les CanOp sont des sonde en deux piece composer d'un crystal scintilateur et d'un detectuer (ici un photomultiplier tube) (voir \cref{ssec:sonde}). C'est sonde sont relativement lourde et ne sont pas solidaire ce qui pose des problement de deconcetion accidentel et d'infiltration de poussiere/d'eau. 
+J'ai donc chercher des sonde qui pourrait atre plus etanche et ou plus leger. En fesant c'est rechecher je suis tomber par accident sur des capteur solide state SiPM qui pourrait remplacer les tube photomultiplicateur. Ces composant sont devenue un remplacement viable de PMT que très recament et n'était donc pas diposible pour la V1 de la CanOp. C'est compossant present de nombreaux avantage:
+\begin{itemize}
+    \item plus leger
+    \item peu cher a fabriquer en mass (capitalization sur les avancer faite en lithographie)
+    \item moins cher
+    \item Basse tenssion (5~V vs 1000-2000~V pour les PMT) $\rightarrow$ simplification des electronique
+\end{itemize}
+
+Ces avantage permet de produire des sonde gamma pesant 25~g\cite{} pour les plus petit comparer a environ 150~g\cite{} pour les sonde classic. Deplus ces sonde sont bien plus facile a rendre ettenche car il n'y a plus besoin de separer l'ecltronique du crystal.
