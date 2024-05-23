@@ -1,3 +1,5 @@
+% !TeX root = ../main.tex
+
 \section{L'annalyse des donnée}
 Une des premiere tache que j'ai effectuer a été que recaculer a partir des donnée brute recolter sur chaque slab la production mensuelle des differnet fosse de Somaïr. Pour cela, j'ai eu acess a la dataplatform de Orano qui est sur Dataiku. 
 
@@ -5,28 +7,33 @@ Dataiku est un platform concu pour symplifier et democratiser l'annalyse de donn
 
 Les donnée en provenance de la CanOp on d'abord besoin d'etre nettoyer car il y a parfois des probleme de mesure, des bug et l'operateur a la possibiliter de supprimer une mesure mais cette fonctionaliter est implementer de tel maniere que la mesure est toujours presente mais avec une valeur de -1. Il faut donc supprimer tout ces valeur. J'ai egalement eu une colonne ne contenant que des numero mais dont certaint etait sauver comme des string et d'autre comme des int.
 
-J'ai ensuite pus etablire les teneur en uranium de chaque slab en utilisant la formule suivante:
-\begin{equation}
-    Teneur en uranium = \begin{cases}
-        cps_{sonde_base}\footnote{cps sont des choc par seconde soit le nombre de photon qui sont rentre en colition avec le crystal} \times 0.0002 \\
-        cps_{sonde_haut} \times 0.0011
+J'ai ensuite pus etablire les teneur en uranium de chaque slab en utilisant la formule suivante\footnote{Les cps sont des choc par seconde, soit le nombre de photon qui sont rentre en colition avec le crystal}:
+\[
+    \text{Teneur en uranium} = 
+    \begin{cases}
+        cps_{\text{ sonde base}} \times 0.0002 \\
+        cps_{\text{ sonde haut}} \times 0.0011
     \end{cases}
-\end{equation}
+\]
+
+
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{img/graph/Correlation_sonde_haute.png}
+        \frame{\includegraphics[width=\textwidth,trim=4 1cm 4 5,clip]{img/graph/Correlation_sonde_haute.png}}
         \caption{Correlation pour la sonde haute}
         \label{fig:correlation_sonde_haute}
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{img/graph/Correlation_sonde_basse.png}
+        \frame{\includegraphics[width=\textwidth,trim=4 4 4 4,clip]{img/graph/Correlation_sonde_basse.png}}
         \caption{Correlation pour la sonde basse}
         \label{fig:correlation_sonde_basse}
     \end{subfigure}
     \caption{Correlation entre la radiometrie et la teneur d'uranium pour les sonde haute et basse, Source: Compte-rendu de mission Orano, Réf. : IDF-CR-001714}
     \label{fig:correlation_sonde}
 \end{figure}
-Ces correlation on etait obtenu directement dans le fosse de Somaïr avec des mesure empirique (voir \cref{fig:correlation_sonde_haute,fig:}).
+Ces correlation on etait obtenu directement dans le fosse de Somaïr avec des mesure empirique (voir \cref{fig:correlation_sonde}).
+
+A partir des teneur en uranium, j'ai pu repartir les slab et les chargement des different camion dans leur different class (voir \ref{}). Une fois les chargement repartie, j'ai pus calculer la production mensuelle de chaque fosse en tenant compte de comment est fait le reporting de la production. En effet, la production est calculer du 26 du mois precedent au 25 du mois actuel sauf pour les mois de decembre/janvier et de juin/juillet ou la date limite est le 1er janvier/juillet a 5h. C'est la une autre subtiliter qui es presente chaque mois auquel j'ai du faire face car la mine ne shouite pas scinder en 2 la production de l'équipe de nuit (21h-5h).
