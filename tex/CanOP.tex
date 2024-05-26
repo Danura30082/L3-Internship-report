@@ -1,41 +1,41 @@
 \section{CanOp}
-CanOp est le nom qui a été donnée au projet de crée une sonde nouvelle generation pour la mine Somaïr au Niger. Cette sonde est composer de 3 piece 
+CanOp est le nom qui a été donné au projet de crée une sonde nouvelle génération pour la mine Somaïr au Niger. Cette sonde est composée de 3~pièces. 
 \begin{itemize}
-    \item 2 Sonde de rayonement Gamma fournit par la societer Geovista
-    \item Une partie elctonique qui inclue une batterie.
-    \item Un GPS differentielle fournit par Ophelia 
+    \item 2 Sondes de rayonnement Gamma fournissent par la société Geovista
+    \item une partie électronique qui inclue une batterie.
+    \item Un GPS différentiel fourni par Ophelia 
 \end{itemize}
-Un operateur Utilise cette sonde en conjection avec une tablette pour determiner ou extraire du minerai. 
-\subsection{Les sonde Gamma}
+Un opérateur utilise cette sonde en connexion avec une tablette pour déterminer ou extraire du minerai. 
+\subsection{Les sondes Gamma}
 \label{ssec:sonde}
-Les sonde gamma de cette appariel provienne de chez ophelia et sont composer de deux partie.
+Les sondes gamma de cet appareil proviennent de chez Ophelia et sont composées de deux parties.
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{img/she/Photomultiplier_coupled_to_a_scintillator_-_fr.png}
-    \caption[Shema d'une sonde gamma NaI]{Shema d'une sonde gamma NaI. Source: \href{https://commons.wikimedia.org/wiki/File:Photomultiplier_coupled_to_a_scintillator_-_fr.png}{Qwerty123uiop}, \href{https://creativecommons.org/licenses/by-sa/3.0}{CC BY-SA 3.0}, via Wikimedia Commons}
+    \caption[Shema d'une sonde gamma NaI]{Schéma d'une sonde gamma NaI. Source~: \href{https://commons.wikimedia.org/wiki/File:Photomultiplier_coupled_to_a_scintillator_-_fr.png}{Qwerty123uiop}, \href{https://creativecommons.org/licenses/by-sa/3.0}{CC BY-SA~3.0}, via Wikimedia Commons}
     \label{fig:detecteur_gamma}
 \end{figure}
 \begin{description}
-    \item[Un crystal NaI] Ce crystal a la propriete d'absorber les photon haut energie des rayon gamma pour les rémetre comme des photon plus basse energie (Voir partie gauche de la \cref{fig:detecteur_gamma})~\cite{site:explication_NaI}
-    \item[Un tube photomultiplicateur] Ce tube permet de convertire un photon en un photoélectrons qui est ensuite multiplier par le tube pour etre convertie en signaux electrique. (Voir partie droite de la \cref{fig:detecteur_gamma})~\cite{site:explication_NaI}
+    \item[Un crystal NaI] Ce cristal a la propriété d'absorber les photons haut énergie des rayons gamma pour les réémettre comme des photons plus basse énergie (voir partie gauche de la \cref{fig:detecteur_gamma})~\cite{site:explication_NaI}
+    \item[Un tube photomultiplicateur] ce tube permet de convertir un photon en un photoélectron qui est ensuite multiplié par le tube pour être converti en signaux électriques. (Voir partie droite de la \cref{fig:detecteur_gamma})~\cite{site:explication_NaI}
 \end{description}
-Pour diverse raison, il y a deux sonde dans la partie basse de la CanOp. L'operateur peut choisir avec quel sonde il shouaite effectuer la mesure (bien que les valeur des deux sonde sont enregistre dans la base de donnée)
+Pour diverse raison, il y a deux sondes dans la partie basse de la CanOp. L'opérateur peut choisir avec quelle sonde il souhaite effectuer la mesure (bien que les valeurs des deux sondes sont enregistrées dans la base de données).
 
-\subsection{Le GPS differencielle}
+\subsection{Le GPS différentiel}
 \label{ssec:Gps_differenciel}
-Pour que la CanOp puisse fonctioner correctement, il faut quel soit situer tres precisement ($\pm$ 10~cm sur les axes x et y et $\pm$ 1~cm sur les axes z) or un gps classic n'arrive que a atteindre $\pm$ 3~m horizontalemnt et $\pm$ 5~m verticalemnt due notament au perturbation atmospherique que subisse les signaux. 
+Pour que la CanOp puisse fonctionner correctement, il faut qu'elle soit situer très précisément ($\pm$ 10~cm sur les axes x et y et $\pm$ 1~cm sur les axes z) or un GPS classique n'arrive qu’a atteindre $\pm$~3~m horizontalement et $\pm$ 5~m verticalement dus notamment aux perturbations atmosphériques que subisse les signaux. 
 \begin{figure}
     \centering
     \includegraphics{img/she/GPS-mode-Naturel-5-10m.png}
-    \caption{Shema presentant les source d'erreur des GPS. Source: Orpheon}
+    \caption{Schéma présentant les sources d'erreur des GPS. Source~: Orphéon}
     \label{fig:GPS_error_source}
 \end{figure}
 
-Une des solution possible pour contournerces problem est d'utiliser un GPS differentielle. Le principe de fonctionement est simple, un station fixe a proximiter de notre zone de mesure recoie egalement les signaux gps et en connaisant sa position precise peut calculer et transmetre les correction necaisaire.~\cite{site:GPS_diff}
+Une des solutions possibles pour contourner ces problèmes est d'utiliser un GPS différentiel. Le principe de fonctionnement est simple, une station fixe à proximité de notre zone de mesure reçoit également les signaux GPS et en connaissant sa position précise peut calculer et transmettre les corrections nécessaires. \cite{site:GPS_diff}
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{img/she/Real_time_kinematic.png}
-    \caption[Shema d'un systeme GPS differenciel]{Shema d'un systeme GPS differenciel. Source: \href{https://commons.wikimedia.org/wiki/File:Real_time_kinematic.svg}{TS Eriksson}, \href{https://creativecommons.org/licenses/by-sa/4.0}{CC BY-SA 4.0}, via Wikimedia Commons}
+    \caption[Shema d'un systeme GPS differenciel]{Schéma d'un système GPS différentiel. Source~: \href{https://commons.wikimedia.org/wiki/File:Real_time_kinematic.svg}{TS Eriksson}, \href{https://creativecommons.org/licenses/by-sa/4.0}{CC BY-SA~4.0}, via Wikimedia Commons}
     \label{fig:RTK}
 \end{figure}
 
