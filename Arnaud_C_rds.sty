@@ -1,5 +1,10 @@
 \usepackage[top=2.5cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry} %margins
-\usepackage[T1]{fontenc} %used to make sure accented lettre comme ou right
+\usepackage[T1]{fontenc} %used to make sure accented lettre comme ou 
+
+\usepackage{csquotes,xpatch} %used to make sure biblatex works
+
+\usepackage[backref=section,sorting=none]{biblatex} %,style=science
+\addbibresource{refs.bib}
 
 \usepackage{mathtools}
 %\usepackage{mathptmx} %times new roman %math package to make equations
@@ -14,7 +19,7 @@
      urlcolor=[rgb]{0,0,0.8}
 }
 
-\usepackage[nameinlink,french]{cleveref}
+
 
 \usepackage{graphicx} % Required for inserting images
 \usepackage{caption}%make caption on figures
@@ -41,6 +46,7 @@
 
 \usepackage{pdfpages} %allows to include external pdf files
 
+\usepackage[nameinlink,french]{cleveref}
 
 
 \author{Arnaud COSTERMANS}

@@ -20,13 +20,6 @@ pdfkeywords={Internship, L3, SOMAIR, CanOP, Uranium extraction, Orano Mining},
 \setlength{\parskip}{0.5 em} %adjust the space between paragraphes to be a bit wider
 
 
-%example figure
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{example.png}
-%     \caption{Here goes your caption}
-%     \label{here goes the label to be able to refrence it}
-% \end{figure}
 
 
 
@@ -40,19 +33,21 @@ pdfkeywords={Internship, L3, SOMAIR, CanOP, Uranium extraction, Orano Mining},
 \input{tex/CanOP}
 \input{tex/Analyse_donnée}
 \input{tex/amelioration}
-
 \input{tex/999Conclution.tex}
+% \section{test}
+% \label{test_label}
+% hello world \cite{article:uranium-concentration} \cref{test_label}
+% \bibliographystyle{nar}
+% %\bibliographystyle{IEEEtran} % We choose the "plain" reference style
+% \bibliography{refs} % Entries are in the refs.bib file
+% \addcontentsline{toc}{section}{Biliography}
 
-
-
-\bibliographystyle{IEEEtran} % We choose the "plain" reference style
-\bibliography{refs} % Entries are in the refs.bib file
-\addcontentsline{toc}{section}{Biliography}
+\printbibliography
 \clearpage
 
 
 \appendix
-\section{Bilan Personnel}
+% \section{Bilan Personnel}
 
 
 \section{Technique d'extraction}
