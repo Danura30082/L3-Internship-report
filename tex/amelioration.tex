@@ -14,12 +14,12 @@ Actuellement, le GPS est une pièce monolithique fournie par Ophelia (voir \cref
 
 \subsection{Alléger les sondes}
 Les sondes sur les CanOp sont des sondes en deux pièces composées d'un cristal scintillateur et d'un détecteur (ici un tube photomultiplicateur) (voir \cref{ssec_sonde}). Ces sondes sont relativement lourdes et ne sont pas solidaires de ce qui pose des problèmes de déconnections accidentel et d'infiltration de poussière/d'eau. 
-J'ai donc cherché des sondes qui pourraient être plus étanches et/ou plus légères. En faisant c'est rechercher je suis tombé par accident sur des capteurs solides state SiPM qui pourrait remplacer les tubes photomultiplicateur. Ces composants sont devenus un remplacement viable de PMT que très récemment et n'était donc pas disponibles pour la V1 de la CanOp. C'est composant présent de nombreux avantage~:
+J'ai donc cherché des sondes qui pourraient être plus étanches et/ou plus légères. En faisant c'est rechercher je suis tombé par accident sur des capteurs solides state SiPM qui pourrait remplacer les tubes photomultiplicateur. Ces composants sont devenus un remplacement viable de PMT que très récemment et n'était donc pas disponibles pour la premiere vertion de la CanOp. Ces composant présent de nombreux avantage~:
 \begin{itemize}
     \item plus léger
     \item peu cher a fabriquer en masse (capitalisation sur les avancées faite en lithographie)
-    \item moins chère
     \item basse tension (5~V vs 1000-2000~V pour les PMT) $\rightarrow$ simplification des électroniques
+    \item Plus robuste (voir la felure sur la \cref{fig_PMT})
 \end{itemize}
 
 Ces avantages permettent de produire des sondes gamma pesant 25~g~\cite{} pour les plus petits comparer à environ 150~g~\cite{} pour les sondes classiques. De plus, ces sondes sont bien plus faciles à rendre étanche, car il n'y a plus besoin de séparer l'électronique du cristal.

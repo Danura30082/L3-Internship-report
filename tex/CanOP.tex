@@ -11,23 +11,39 @@ Un opérateur utilise cette sonde en connexion avec une tablette pour détermine
 \label{ssec_sonde}
 Les sondes gamma de cet appareil proviennent de chez Ophelia et sont composées de deux parties.
 \begin{figure}
-    \centering
-    \includegraphics[width=0.7\textwidth]{img/she/Photomultiplier_coupled_to_a_scintillator_-_fr.png}
-    \caption[Shema d'une sonde gamma NaI]{Schéma d'une sonde gamma NaI. Source~: \href{https://commons.wikimedia.org/wiki/File:Photomultiplier_coupled_to_a_scintillator_-_fr.png}{Qwerty123uiop}, \href{https://creativecommons.org/licenses/by-sa/3.0}{CC BY-SA~3.0}, via Wikimedia Commons}
-    \label{fig_detecteur_gamma}
+    
+    \begin{subfigure}{0.9\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{img/she/Photomultiplier_coupled_to_a_scintillator_-_fr.png}
+        \caption[Shema d'une sonde gamma NaI]{Schéma d'une sonde gamma NaI. Source~: \href{https://commons.wikimedia.org/wiki/File:Photomultiplier_coupled_to_a_scintillator_-_fr.png}{Qwerty123uiop}, \href{https://creativecommons.org/licenses/by-sa/3.0}{CC BY-SA~3.0}, via Wikimedia Commons}
+        \label{fig_detecteur_gamma}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[trim=1cm 2cm 3cm 4cm, clip=true, totalheight=0.5\textheight, angle=90]{img/photo/Crystal.jpg}
+        \caption[Photo d'un crystal NaI]{Photo d'un crystal NaI doper au thallium. Dimention: diametre 28*50mm}
+        \label{fig_Nai}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/photo/PMT.jpg}
+        \caption[Photo d'un tube photomultiplicateur]{Photo d'un tube photomultiplicateur. Noter la fellelure a gauche de l'etiquette. Dimention: diametre 29*114mm}
+        \label{fig_PMT}
+    \end{subfigure}
 \end{figure}
 \begin{description}
-    \item[Un crystal NaI] Ce cristal a la propriété d'absorber les photons haut énergie des rayons gamma pour les réémettre comme des photons plus basse énergie (voir partie gauche de la \cref{fig_detecteur_gamma})~\cite{site:explication_NaI}
-    \item[Un tube photomultiplicateur] ce tube permet de convertir un photon en un photoélectron qui est ensuite multiplié par le tube pour être converti en signaux électriques. (Voir partie droite de la \cref{fig_detecteur_gamma})~\cite{site:explication_NaI}
+    \item[Un crystal NaI] Ce cristal a la propriété d'absorber les photons haut énergie des rayons gamma pour les réémettre comme des photons plus basse énergie (voir partie gauche de la \cref{fig_detecteur_gamma} et \cref{fig_Nai})~\cite{site:explication_NaI}
+    \item[Un tube photomultiplicateur] ce tube permet de convertir un photon en un photoélectron qui est ensuite multiplié par le tube pour être converti en signaux électriques. (Voir partie droite de la \cref{fig_detecteur_gamma} et \cref{fig_PMT})~\cite{site:explication_NaI}
 \end{description}
-Pour diverse raison, il y a deux sondes dans la partie basse de la CanOp. L'opérateur peut choisir avec quelle sonde il souhaite effectuer la mesure (bien que les valeurs des deux sondes sont enregistrées dans la base de données).
+A la demande du client (Somaïr) une sonde basse a été inclut dans le pojet pour permettre de faire des mesure au niveaux du sol comme elle etait fait avant (voir \ref{}). %photo et section
+Les etude interne montre que les mesure les plus fiable sont fait a partir de la sonde haute donc la desicition a etait prise d'inclure les deux. A l'heure actuel, sleon les donnée enregistre par le sonde, 68,5\% des mesure sont fait a partir de la sonde haute et 29\% a partir de la sonde basse. Les autre mesure sont fait avec une combinaison des deux.
 
 \subsection{Le GPS différentiel}
 \label{ssec_Gps_differenciel}
-Pour que la CanOp puisse fonctionner correctement, il faut qu'elle soit situer très précisément ($\pm$ 10~cm sur les axes x et y et $\pm$ 1~cm sur les axes z) or un GPS classique n'arrive qu’a atteindre $\pm$~3~m horizontalement et $\pm$ 5~m verticalement dus notamment aux perturbations atmosphériques que subisse les signaux. 
+Pour que la CanOp puisse fonctionner correctement, il faut qu'elle soit situer très précisément ($\pm$ 10~cm sur les axes x et y et $\pm$ 1~cm sur les axes z), or un GPS classique n'arrive qu’a atteindre $\pm$~3~m horizontalement et $\pm$ 5~m verticalement dus notamment aux perturbations atmosphériques que subisse les signaux. 
 \begin{figure}
     \centering
-    \includegraphics{img/she/GPS-mode-Naturel-5-10m.png}
+    \includegraphics[height=0.5\textwidth]{img/she/GPS-mode-Naturel-5-10m.png}
     \caption[Source d'erreur des GPS]{Schéma présentant les sources d'erreur des GPS. Source~: Orphéon}
     \label{fig_GPS_error_source}
 \end{figure}
