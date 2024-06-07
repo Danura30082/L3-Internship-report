@@ -1,23 +1,25 @@
-\usepackage[top=2.5cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry} %margins
-\usepackage[T1]{fontenc} %used to make sure accented lettre comme ou 
-
-\usepackage{csquotes,xpatch} %used to make sure biblatex works
+\usepackage[top=2.54cm,bottom=2cm,left=2.54cm,right=2.54cm]{geometry} %margins %standard word margins exepte for bottom
+\usepackage[T1]{fontenc} %used to make sure accented lettre are displayed correctly
+\usepackage{lmodern}
+\usepackage{csquotes,xpatch} %necessary for biblatex to work
 
 \usepackage[backref=section,sorting=none]{biblatex} %,style=science
 \addbibresource{refs.bib}
 
+% \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{mathabx}
+\usepackage{xfrac}%allows to make inline fractions
 %\usepackage{mathptmx} %times new roman %math package to make equations
 % \numberwithin{equation}{section} %allows to rest numbering for long documents
 % \numberwithin{figure}{section} %allows to rest numbering for long documents
 
 \usepackage{hyperref} %Insert links %[backref] usefull
 \hypersetup{
- colorlinks,
-     linkcolor=[rgb]{0.6,0,0},
-     citecolor=[rgb]{0,0.5,0},
-     urlcolor=[rgb]{0,0,0.8}
+    colorlinks,
+    linkcolor=[rgb]{0.6,0,0},
+    citecolor=[rgb]{0,0.5,0},
+    urlcolor=[rgb]{0,0,0.8}
 }
 
 
@@ -46,7 +48,7 @@
 \MakePerPage{footnote}
 
 \usepackage{tocloft} %used to control the layout of a table of contents
-\setlength{\cftparskip}{0.2 em} 
+\setlength{\cftparskip}{0.2 em}
 \setlength{\cftbeforesecskip}{0.5em}
 
 \usepackage{pdfpages} %allows to include external pdf files
