@@ -1,7 +1,7 @@
 % !TeX root = ../COSTERMANS_Arnaud_Rapport_de_Stage_V.tex
 
 \section{L'analyse des données}
-Une des premières tâches que j'ai effectuées a été que recalculée à partir des données brutes récoltées sur chaque slab, la production mensuelle des différentes fosses de Somaïr. Pour cela, j'ai eu accès  à la data-plateforme d’Orano qui est hébergé sur Dataiku. 
+Une des premières tâches que j'ai effectuées a été que recalculée à partir des données brutes récoltées sur chaque slab, la production mensuelle des différentes fosses de Somaïr. Pour cela, j'ai eu accès  à la data-plateforme d’Orano qui est hébergé sur Dataiku.
 
 Dataiku est une plateforme conçue pour simplifier et démocratiser l'analyse de donnée. Pour cela, il n'y a même pas besoin d'écrire une ligne de code, car Dataiku a des recettes visuelles. Pour ceux qui souhaitent aller plus loin, il est possible d'écrire des recettes en python ou en R. Pour effectuer mes analyses, je me suis plutôt appuyé sur les recettes Python qui exploitent la librairie \href{https://pandas.pydata.org/}{Pandas} et \href{https://numpy.org/}{Numpy}.
 
@@ -9,7 +9,7 @@ Les données en provenance de la CanOp ont d'abord besoin d'être nettoyées, ca
 
 J'ai ensuite pu établir les teneurs en uranium de chaque slab en utilisant la formule suivante\footnote{Les cps sont des choc par seconde, soit le nombre de photon qui sont rentre en colition avec le cristal}~:
 \[
-    \text{Teneur en uranium} = 
+    \text{Teneur en uranium} =
     \begin{cases}
         cps_{\text{ sonde base}} \times 0.0002 \\
         cps_{\text{ sonde haut}} \times 0.0011
@@ -21,13 +21,13 @@ J'ai ensuite pu établir les teneurs en uranium de chaque slab en utilisant la f
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \frame{\includegraphics[width=\textwidth,trim=4 1cm 4 5,clip]{img/graph/Correlation_sonde_haute.png}}
+        \frame{\includegraphics[width=\textwidth,trim=4 1cm 4 5,clip]{graph/Correlation_sonde_haute.png}}
         \caption{Corrélation pour la sonde haute}
         \label{fig_correlation_sonde_haute}
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \frame{\includegraphics[width=\textwidth,trim=4 4 4 4,clip]{img/graph/Correlation_sonde_basse.png}}
+        \frame{\includegraphics[width=\textwidth,trim=4 4 4 4,clip]{graph/Correlation_sonde_basse.png}}
         \caption{Corrélation pour la sonde basse}
         \label{fig_correlation_sonde_basse}
     \end{subfigure}
