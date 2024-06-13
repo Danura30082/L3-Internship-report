@@ -1,15 +1,15 @@
 \section{CanOp}
 \label{sec_CanOp}
-CanOp est le nom qui a été donné au projet de crée une sonde nouvelle génération pour la mine Somaïr au Niger. Cette sonde est composée de 3~pièces.
+CanOp est le nom qui a été donné au projet de crée un equiment nouvelle génération pour la mine Somaïr au Niger. Cette sonde est composée de 3~elements majeurs.
 \begin{itemize}
     \item 2 Sondes de rayonnement Gamma fournissent par la société Geovista
-    \item une partie électronique qui inclue une batterie.
+    \item une partie électronique qui inclue l'alimentation par batterie. %geovista
     \item Un GPS différentiel fourni par Ophelia
 \end{itemize}
-Un opérateur utilise cette sonde en connexion avec une tablette pour déterminer ou extraire du minerai.
+Un opérateur utilise cette sonde en connexion avec une tablette pour déterminer ou extraire du minerai.%figure de la canop
 \subsection{Les sondes Gamma}
 \label{ssec_sonde}
-Les sondes gamma de cet appareil proviennent de chez Ophelia et sont composées de deux parties.
+Les sondes gamma de cet appareil proviennent de chez Geovista et sont composées de deux parties.
 \begin{figure}
 
     \begin{subfigure}{1\textwidth}
@@ -41,11 +41,11 @@ Les sondes gamma de cet appareil proviennent de chez Ophelia et sont composées 
 \end{description}
 
 À la demande du client (Somaïr), une sonde basse a été incluse dans le projet en plus de la sonde haut prevue initialement pour permettre de faire des mesures aux niveaux du sol comme elle était faite avant (voir \cref{ssec_extraction,fig_AP_geiger}). %photo et section
-Les études internes montrent que les mesures les plus fiables sont faites à partir de la sonde haute donc la décision a été prise d'inclure les deux. À l'heure actuel, selon les données enregistrées par la sonde, 68,5~\% des mesures sont faits à partir de la sonde haute et 29~\% à partir de la sonde basse. Les autres mesures sont faites avec une combinaison des deux.
+Les études internes montrent que les mesures les plus fiables sont faites à partir de la sonde haute donc la décision a été prise d'inclure les deux. À l'heure actuel, selon les données enregistrées par la sonde, 68,5~\% des mesures sont faits à partir de la sonde haute et 29~\% à partir de la sonde basse. Les autres mesures sont faites avec une combinaison des deux.%parler de la sonde haut et du colimatage%figure des differente sonde
 
 \subsection{Le GPS différentiel}
 \label{ssec_Gps_differenciel}
-Pour que la CanOp puisse fonctionner correctement, il faut qu'elle soit située très précisément ($\pm$ 10~cm sur les axes x et y et $\pm$ 1~cm sur les axes z), or un GPS classique n'arrive qu’a atteindre $\pm$~3~m horizontalement et $\pm$ 5~m verticalement \cite{GPS_accuracy} dus notamment aux perturbations atmosphériques que subisse les signaux.
+Pour que la CanOp puisse fonctionner correctement, il faut qu'elle soit située très précisément ($\pm$ 10~cm sur les axes x et y et $\pm$ 1~cm sur les axes z), or un GPS classique n'arrive qu’a atteindre $\pm$~3~m horizontalement et $\pm$ 5~m verticalement \cite{GPS_accuracy} dus notamment aux perturbations atmosphériques que subisse les signaux. %point de meure gamme doit etre precis
 \begin{figure}
 
     \begin{subfigure}[t]{0.5\textwidth}
@@ -65,7 +65,7 @@ Pour que la CanOp puisse fonctionner correctement, il faut qu'elle soit située 
     \caption{Erreur du GPS et fonctionnement GPS RTK}
 \end{figure}
 
-Une des solutions possibles pour contourner ces problèmes est d'utiliser un GPS différentiel. Le principe de fonctionnement est$ sim$ple, une station fixe à proximité de notre zone de mesure reçoit également les signaux GPS et en connaissant sa position précise peuvent calculer et transmettre les corrections nécessaires. \cite{site:GPS_diff}
+Une des solutions possibles pour contourner ces problèmes est d'utiliser un GPS différentiel. Le principe de fonctionnement est$ sim$ple, une station fixe à proximité de notre zone de mesure reçoit également les signaux GPS et en connaissant sa position précise peuvent calculer et transmettre les corrections nécessaires. \cite{site:GPS_diff} %de la partie vers la partie modile
 
 \subsection{L'électronique}
 
