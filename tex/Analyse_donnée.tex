@@ -1,13 +1,13 @@
 % !TeX root = ../COSTERMANS_Arnaud_Rapport_de_Stage_V.tex
 
 \section{L'analyse des données}
-Une des premières tâches que j'ai effectuées a été que recalculée à partir des données brutes récoltées sur chaque slab, la production mensuelle des différentes fosses de Somaïr. Pour cela, j'ai eu accès  à la data-plateforme d’Orano qui est hébergé sur Dataiku.
+Une des premières tâches que j'ai effectuée a été de recalculer à partir des données brutes récoltées sur chaque slab, la production mensuelle des différentes fosses de Somaïr. Pour cela, j'ai eu accès  à la data-plateforme d’Orano qui est hébergé sur Dataiku.
 
-Dataiku est une plateforme conçue pour simplifier et démocratiser l'analyse de donnée. Pour cela, il n'y a même pas besoin d'écrire une ligne de code, car Dataiku a des recettes visuelles. Pour ceux qui souhaitent aller plus loin, il est possible d'écrire des recettes en python ou en R. Pour effectuer mes analyses, je me suis plutôt appuyé sur les recettes Python qui exploitent la librairie \href{https://pandas.pydata.org/}{Pandas} et \href{https://numpy.org/}{Numpy}.
+Dataiku est une plateforme conçue pour simplifier et démocratiser l'analyse de données. Pour cela, il n'y a même pas besoin d'écrire une ligne de code, car Dataiku a des recettes visuelles. Pour ceux qui souhaitent aller plus loin, il est possible d'écrire des recettes en python ou en R. Pour effectuer mes analyses, je me suis plutôt appuyé sur les recettes Python qui exploitent la librairie \href{https://pandas.pydata.org/}{Pandas} et \href{https://numpy.org/}{Numpy}.
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{she/powerbi.png}
-    \caption[Capture d'ecran d'un dashboard PowerBI]{Capture d'écran d'un dashboard PowerBI que j'ai créée pour suivre la production mensuelle de la mine de Somaïr}
+    \caption[Capture d'ecran d'un dashboard PowerBI]{Capture d'écran d'un dashboard PowerBI que j'ai créé pour suivre la production mensuelle de la mine de Somaïr}
 \end{figure}
 
 Les données en provenance de la CanOp ont d'abord besoin d'être nettoyées, car il y a parfois des problèmes de mesure, des bugs et l'opérateur a la possibilité de supprimer une mesure, mais cette fonctionnalité est implémentée de telle manière que la mesure est toujours présente, mais avec une valeur de -1. Il faut donc supprimer toutes ces valeurs. J'ai également eu une colonne ne contenant que des numéros, mais dont certains étaient sauvés comme des strings et d'autre comme des int.

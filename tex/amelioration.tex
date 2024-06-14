@@ -1,16 +1,16 @@
 \section{Amélioration de la CanOp}
 
-Un des problèmes majeurs de la CanOp reste son poids relativement conséquent de 5,5~kg. Ce poids peut paraître léger, mais les opérateurs doive porter les sondes à bout de bras pendant un shift de 8h sous le soleil avec une température qui monte régulièrement au-dessus de 40~°C. Déjà lors de sa conception, on avez envisagée de changer l'armature d'aluminium pour de la fibre de carbone.
+Un des problèmes majeurs de la CanOp reste son poids relativement conséquent, à savoir 5,5~kg. Ce poids peut paraître léger, mais les opérateurs doive porter les sondes à bout de bras pendant un shift de 8h sous le soleil avec une température qui monte régulièrement au-dessus de 40~°C. Déjà lors de sa conception, il avait été envisagé de changer l'armature d'aluminium pour de la fibre de carbone.
 
-Une grosse partie de mon travail a donc était d'étudier et de proposer des solutions à ce problème. Assez rapidement, trois avenues d'amélioration sont apparues.
+Une partie important de mon travail a donc était d'étudier et de proposer des solutions à ce problème. Assez rapidement, trois axes d'amélioration sont apparus.
 \begin{enumerate}
     \item Alléger le GPS
-    \item alléger les sondes
-    \item repartir l'effort sur l'opérateur
+    \item Alléger les sondes
+    \item Repartir l'effort sur l'opérateur
 \end{enumerate}
 
 \subsection{Alléger le GPS}
-Actuellement, le GPS est une pièce monolithique fournie par Ophelia (voir \cref{ssec_Gps_differenciel}) qui calcule en interne la position corrigée de la sonde. Une solution pourrait être de fracturer les différentes parties du GPS et de délocaliser le calcul de la position et de sa correction a appliqué depuis la tablette de l'opérateur en laissant l'antenne sur la sonde. D'autres solutions à partir de puce intégrées pourraient également mener à des économies de poids.
+Actuellement, le GPS est une pièce monolithique fournie par Ophelia (voir \cref{ssec_Gps_differenciel}) qui calcule en interne la position corrigée de la sonde. Une solution pourrait être de fracturer les différentes parties du GPS et de délocaliser le calcul de la position et de sa correction à appliquer depuis la tablette de l'opérateur en laissant l'antenne sur la sonde. D'autres solutions à partir de puce intégrées pourraient également mener à des économies de poids.
 
 \subsection{Alléger les sondes}
 Les sondes sur les CanOp sont des scinti-bloc en deux pièces composées d'un cristal scintillateur et d'un détecteur (ici un tube photomultiplicateur) (voir \cref{ssec_sonde}). Ces sondes sont relativement lourdes et ne sont pas solidaires de ce qui pose des problèmes de déconnections accidentel et d'infiltration de poussière/d'eau. %fuite de lumiere
@@ -25,4 +25,4 @@ J'ai donc cherché des sondes qui pourraient être plus étanches et/ou plus lé
 Ces avantages permettent de produire des sondes gamma pesant 25~g pour les plus petits comparer à environ 150~g pour les sondes classiques. De plus, ces sondes sont bien plus faciles à rendre étanche, car il n'y a plus besoin de séparer l'électronique du cristal. Pour ces raisons, 2~capteurs ont été commandés par mon maitre de stage pour être prochainement évalués.
 
 \subsection{Répartir l'effort sur l'opérateur}
-Une autre solution pour alléger la charge de l'opérateur serait de répartir l'effort grâce à un bras articulé. En effet, les opérateurs de caméra de cinéma sont confrontés a un problème similaire et pour de pus petite caméra il utilise un harnais auquel est attaché un bras qui grâce à des ressorts permet de soulever la caméra. Cette solution a l'avantage de ne pas demander de modification de la sonde et peut rapidement être mise en place. Cependant, elle ne permet pas de réduire le poids de la sonde et peut rendre le dispositif plus encombrant.
+Une autre solution pour alléger la charge de l'opérateur serait de répartir l'effort grâce à un bras articulé. En effet, les opérateurs de caméra de cinéma sont confrontés à un problème similaire et pour des plus petites caméras ils utilisent un harnais auquel est attaché un bras qui grâce à des ressorts permet de soulever la caméra. Cette solution a l'avantage de ne pas demander de modification de la sonde et peut rapidement être mise en place. Cependant, elle ne permet pas de réduire le poids de la sonde et peut rendre le dispositif plus encombrant.
