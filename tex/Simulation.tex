@@ -1,17 +1,16 @@
 \section{Simulation}
-Une difference etre les tube photomultiplicateur et les SiPM est que les tube photomultiplicateur ont une zone de detection en forme de rond alors que les SiPM ne peuve que etre produit en carré et donc les une zone de detection carré. Cela implique donc un changement de forme de cristal. Pour s'assurer que les ancien cristaux et les nouveaux se comporte de la meme maniere, nous allons faire une simulation. Les cristaux NaI utiliser actuelment sont des cylindre de 28mm de diametre et 50mm de hauteur. Pour que les nouveaux critaux cuboide rentre dans le boitier, ils doive avoir une longeur et une largeur de 20mm et pour que le volume, et donc normalement le nombre de detection, reste le meme, ils doive avoir une hauteur de 76.96mm. Nous testeron egalement un cristal avec un hauteur de 75mm pour voir si la petit difference de volume a un impact sur les resultats.
+
 \pgfplotstableread[row sep=\\,col sep=&]{
     cristal                                                  & Serie 1 & Serie 2 & error_1   & error_2\\
     Cristal cylindrique                                      & 1430.18 & 955.978 & 563.49092 & 372.5446266 \\
     Cristal cuboide (\qtyproduct{20x20x76.96}{\milli\metre}) & 2221.99 & 963.492 & 709.925805 & 255.1326816 \\
-    Cristal cuboide (\qtyproduct{20x20x75}{\milli\metre})    & 2092.62 & 1502.45 & 400036.744991191 & 95048.3096001287 \\
+    Cristal cuboide (\qtyproduct{20x20x75}{\milli\metre})    & 2092.62 & 1502.45 & 613.55 & 399.65 \\
 }\datatable
-\begin{figure}
+\begin{figure}[h!t]
     \centering
-    % \includegraphics[width=0.5\textwidth]{photo/sonde_carre_simu.PNG}
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
-        \begin{tikzpicture}[baseline=(current bounding box.north)] %allows to align the top of tikzpicture to the other subfigure
+        \begin{tikzpicture}
             \begin{axis}[
                     ybar,
                     enlarge y limits={value=0.15, upper},
@@ -20,26 +19,28 @@ Une difference etre les tube photomultiplicateur et les SiPM est que les tube ph
                             anchor=north east,legend columns=-1},
                     ylabel={Comptage (\unit{cps})},
                     ymin=0,
-                    % ylabel shift = 0.1 \linewidth,
                     symbolic x coords={Cristal cylindrique,Cristal cuboide (\qtyproduct{20x20x76.96}{\milli\metre}),Cristal cuboide (\qtyproduct{20x20x75}{\milli\metre})},
                     xtick=data,
                     xticklabel style={text width=0.33\linewidth,anchor=north},
                 ]
-                \addplot table[x=cristal,y=Serie 1] {\datatable};
-                \addplot table[x=cristal,y=Serie 2] {\datatable};
+                \addplot+[error bars/.cd, y dir=both, y explicit] table[x=cristal,y=Serie 1, y error=error_1] {\datatable};
+                \addplot+[error bars/.cd, y dir=both, y explicit] table[x=cristal,y=Serie 2, y error=error_2] {\datatable};
                 \legend{Serie 1,Serie 2}
             \end{axis}
-        \end{tikzpicture}    
-        \caption{Comparaison des comptages entre les cristaux cylindrique et cuboide}
+        \end{tikzpicture}
+        \caption{Comparaison des comptages entre les cristaux cylindrique et cuboïdes}
+        \label{fig:graph_simu_cristal}
     \end{subfigure}
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
-        \includegraphics[width=0.9\textwidth]{photo/sonde_carre_simu.PNG}
+        \includegraphics[width=0.7\textwidth]{photo/sonde_carre_simu.PNG}
 
-        \caption{Capture d'ecran de la simulation d'un cristal cuboide}
-        
+        \caption{Capture d'écran de la simulation d'un cristal cuboïde}
+
     \end{subfigure}
+    \caption{Simulation de détection de rayonnement gamma}
 \end{figure}
 
-Un autre stagiare travailler sur des sujet de simulation et a donc pu faire ces simulation pour moi. Malheuresment il n'avait pas encore eu ses acces au serveur de calcul d'orano et donc a du les faire tourner a plus basse resolution sur sont ordinateur.
+Une différence entre les tubes photomultiplicateur et les SiPM est que les tubes photomultiplicateur ont une zone de détection en forme de rond alors que les SiPM ne peuvent qu’être produits en carré et donc les zones de détection sont carrées. Cela implique donc un changement de forme de cristal. Pour nous assurer que les anciens cristaux et les nouveaux se comportent de la même manière, nous allons faire une simulation. Les cristaux NaI à utiliser actuellement sont des cylindres de 28~mm de diamètre et 50~mm de hauteur. Pour que les nouveaux cristaux cuboïdes rentrent dans le boitier, ils doivent avoir une longueur et une largeur de 20~mm et pour que le volume, et donc normalement le nombre de détections, reste le même, ils doivent avoir une hauteur de 76,96~mm. Nous testerons également un cristal avec une hauteur de 75~mm pour voir si la petite différence de volume a un impact sur les résultats.
 
+Un autre stagiaire a travaillé sur des sujets de simulation et a donc pu faire ces simulations pour moi. Malheureusement, il n'avait pas encore eu ses accès au serveur de calcul d'Orano et donc a dû les faire tourner à une plus basse résolution sur son ordinateur ce qui explique les forts bars d'erreur sur la figure \ref{fig:graph_simu_cristal}. %todo fix cref
